@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.02">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">9D34</string>
-		<string key="IBDocument.InterfaceBuilderVersion">667</string>
-		<string key="IBDocument.AppKitVersion">949.33</string>
+		<string key="IBDocument.SystemVersion">9C7010</string>
+		<string key="IBDocument.InterfaceBuilderVersion">658</string>
+		<string key="IBDocument.AppKitVersion">949.26</string>
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="372"/>
+			<integer value="453"/>
 			<integer value="57"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -1105,7 +1105,7 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{59, 199}, {874, 912}}</string>
+				<string key="NSWindowRect">{{59, 255}, {874, 856}}</string>
 				<int key="NSWTFlags">1946157056</int>
 				<string key="NSWindowTitle">Window</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -1124,7 +1124,7 @@
 								<object class="NSCustomView" id="160016088">
 									<reference key="NSNextResponder" ref="762481972"/>
 									<int key="NSvFlags">274</int>
-									<string key="NSFrameSize">{834, 425}</string>
+									<string key="NSFrameSize">{834, 396}</string>
 									<reference key="NSSuperview" ref="762481972"/>
 									<string key="NSClassName">GDGraphView</string>
 								</object>
@@ -1229,7 +1229,7 @@ Om5vZGVzKQooQGdyYXBoIHNldEVkZ2VzOmVkZ2VzKQ</bytes>
 																<int key="NSTCFlags">1</int>
 															</object>
 															<object class="NSTextViewSharedData" key="NSSharedData">
-																<int key="NSFlags">11127</int>
+																<int key="NSFlags">11075</int>
 																<object class="NSColor" key="NSBackgroundColor" id="944034924">
 																	<int key="NSColorSpace">3</int>
 																	<bytes key="NSWhite">MQA</bytes>
@@ -1284,12 +1284,12 @@ Om5vZGVzKQooQGdyYXBoIHNldEVkZ2VzOmVkZ2VzKQ</bytes>
 																<nil key="NSDefaultParagraphStyle"/>
 															</object>
 															<int key="NSTVFlags">6</int>
-															<string key="NSMaxSize">{1341, 1e+07}</string>
+															<string key="NSMaxSize">{1680, 1e+07}</string>
 															<string key="NSMinize">{223, 0}</string>
 															<nil key="NSDelegate"/>
 														</object>
 													</object>
-													<string key="NSFrame">{{1, 1}, {839, 412}}</string>
+													<string key="NSFrame">{{1, 1}, {839, 385}}</string>
 													<reference key="NSSuperview" ref="88469749"/>
 													<reference key="NSNextKeyView" ref="170870912"/>
 													<reference key="NSDocView" ref="170870912"/>
@@ -1321,7 +1321,7 @@ Om5vZGVzKQooQGdyYXBoIHNldEVkZ2VzOmVkZ2VzKQ</bytes>
 													<double key="NSPercent">9.456522e-01</double>
 												</object>
 											</object>
-											<string key="NSFrame">{{-7, -16}, {841, 414}}</string>
+											<string key="NSFrame">{{-7, -16}, {841, 387}}</string>
 											<reference key="NSSuperview" ref="556550215"/>
 											<reference key="NSNextKeyView" ref="473919174"/>
 											<int key="NSsFlags">562</int>
@@ -1330,12 +1330,12 @@ Om5vZGVzKQooQGdyYXBoIHNldEVkZ2VzOmVkZ2VzKQ</bytes>
 											<reference key="NSContentView" ref="473919174"/>
 										</object>
 									</object>
-									<string key="NSFrame">{{0, 434}, {834, 398}}</string>
+									<string key="NSFrame">{{0, 405}, {834, 371}}</string>
 									<reference key="NSSuperview" ref="762481972"/>
 									<string key="NSClassName">NSView</string>
 								</object>
 							</object>
-							<string key="NSFrame">{{20, 60}, {834, 832}}</string>
+							<string key="NSFrame">{{20, 60}, {834, 776}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 						</object>
 						<object class="NSButton" id="389458439">
@@ -1363,7 +1363,7 @@ Om5vZGVzKQooQGdyYXBoIHNldEVkZ2VzOmVkZ2VzKQ</bytes>
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{874, 912}</string>
+					<string key="NSFrameSize">{874, 856}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
@@ -3273,9 +3273,9 @@ Om5vZGVzKQooQGdyYXBoIHNldEVkZ2VzOmVkZ2VzKQ</bytes>
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{84, 192}, {874, 912}}</string>
+					<string>{{84, 0}, {874, 856}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{84, 192}, {874, 912}}</string>
+					<string>{{84, 0}, {874, 856}}</string>
 					<reference ref="9"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
