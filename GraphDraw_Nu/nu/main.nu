@@ -44,12 +44,19 @@
         (@edges << e)))
 
 (class GDGraphView is NSView
-     (ivar (id) graph)
+     (ivar (id) graph (id) backgroundColor (id) nodeColor (id) edgeColor
+        (int) nodeSize (double) edgeWidth)
+     (ivar-accessors)
      
      (- (id) initWithFrame: (NSRect) frameRect is
         (set self (super initWithFrame:frameRect))
         (if (self)
 			(set $view self)
+            (set @backgroundColor (NSColor darkGrayColor))
+            (set @nodeColor (NSColor redColor))
+            (set @edgeColor (NSColor whiteColor))
+            (set @nodeSize 6)
+            (set @edgeWidth 0.9)
             (set b (self bounds))
             (self translateOriginToPoint:
                   (NSMakePoint (+ (b first) (/ (b third) 2.0))
@@ -59,25 +66,48 @@
      (- (void) setGraph: (id) g is
         (set @graph g)
         (self setNeedsDisplay:YES))
+        
+     (- (void) setBackgroundColor: (id) color is
+        (set @backgroundColor color)
+        (self setNeedsDisplay:YES))
+
+     (- (void) setNodeColor: (id) color is
+        (set @nodeColor color)
+        (self setNeedsDisplay:YES))
+
+     (- (void) setEdgeColor: (id) color is
+        (set @edgeColor color)
+        (self setNeedsDisplay:YES))
+
+     (- (void) setNodeSize: (int) size is
+        (set @nodeSize size)
+        (self setNeedsDisplay:YES))
+        
+     (- (void) setEdgeWidth: (double) width is
+        (set @edgeWidth width)
+        (self setNeedsDisplay:YES))
      
      (- (void) drawRect: (NSRect) rect is
         (set b (self bounds))
-        ((NSColor darkGrayColor) set)
+        (@backgroundColor set)
         (NSBezierPath fillRect:b)
         (self translateOriginToPoint:
               (NSMakePoint (+ (b first) (/ (b third) 2.0))
                    (+ (b second) (/ (b fourth) 2.0))))
-        ((NSColor redColor) set)
+        (@nodeColor set)
         (set nodes (@graph nodes))
         (set count (nodes count))
         (count times: (do (i)
                           (set n (nodes i))
                           (set np (n point))
-                          (set r (NSMakeRect (- (np first) 3) (- (np second) 3) 6 6))
+                          (set r (NSMakeRect (- (np first) (/ @nodeSize 2)) 
+                                             (- (np second) (/ @nodeSize 2)) 
+                                             @nodeSize
+                                             @nodeSize))
                           (NSBezierPath fillRect:r)))
         
-        ((NSColor whiteColor) set)
-        (NSBezierPath setDefaultLineWidth:0.9)
+        (@edgeColor set)
+        (NSBezierPath setDefaultLineWidth:@edgeWidth)
         (set edges (@graph edges))
         (set count (edges count))
         (count times: (do (i)
