@@ -3,101 +3,102 @@
 
 (import Cocoa)		;; bridgesupport
 (load "console")	;; interactive console
-       
+
 (class GDNode is NSObject
-    (ivar (id) point)
-    
-    (- (id) initWithPoint: (id) aPoint is
+     (ivar (id) point)
+     
+     (- (id) initWithPoint: (id) aPoint is
         (super init)
         (set @point aPoint)
         self)
-        
-    (- (NSPoint) point is
+     
+     (- (NSPoint) point is
         @point))
-        
+
 (class GDEdge is NSObject
-    (ivar (id) sourceNode (id) destinationNode)
-    (ivar-accessors)
-    
-    (- (id) initWithSourceNode: (id) aNode 
-              destinationNode: (id) bNode is
+     (ivar (id) sourceNode (id) destinationNode)
+     (ivar-accessors)
+     
+     (- (id) initWithSourceNode: (id) aNode
+        destinationNode: (id) bNode is
         (super init)
         (set @sourceNode aNode)
         (set @destinationNode bNode)
         self))
-        
+
 (class GDGraph is NSObject
-    (ivar (id) nodes (id) edges)
-    (ivar-accessors)
-    
-    (- (id) init is
+     (ivar (id) nodes (id) edges)
+     (ivar-accessors)
+     
+     (- (id) init is
         (super init)
+		(set $graph self)
         (set @nodes (array))
         (set @edges (array))
         self)
-    
-    (- (void) addNode: (id) n is
-        (@nodes addObject:n))
-    
-    (- (void) addEdge: (id) e is
-        (@edges addObject:e)))
-    
-    
-    
-(class GDGraphView is NSView
-    (ivar (id) graph)
+     
+     (- (void) addNode: (id) n is
+        (@nodes << n))
+     
+     (- (void) addEdge: (id) e is
+        (@edges << e)))
 
-    (- (id) initWithFrame: (NSRect) frameRect is
+(class GDGraphView is NSView
+     (ivar (id) graph)
+     
+     (- (id) initWithFrame: (NSRect) frameRect is
         (set self (super initWithFrame:frameRect))
         (if (self)
+			(set $view self)
             (set b (self bounds))
-            (self translateOriginToPoint: (NSMakePoint (+ (b first) (/ (b third) 2.0))
-                                                       (+ (b second) (/ (b fourth) 2.0)))))
+            (self translateOriginToPoint:
+                  (NSMakePoint (+ (b first) (/ (b third) 2.0))
+                       (+ (b second) (/ (b fourth) 2.0)))))
         self)
-
-    (- (void) setGraph: (id) g is
+     
+     (- (void) setGraph: (id) g is
         (set @graph g)
         (self setNeedsDisplay:YES))
-
-    (- (void) drawRect: (NSRect) rect is
+     
+     (- (void) drawRect: (NSRect) rect is
         (set b (self bounds))
         ((NSColor darkGrayColor) set)
         (NSBezierPath fillRect:b)
-        (self translateOriginToPoint:(NSMakePoint (+ (b first) (/ (b third) 2.0))
-                                                  (+ (b second) (/ (b fourth) 2.0))))
+        (self translateOriginToPoint:
+              (NSMakePoint (+ (b first) (/ (b third) 2.0))
+                   (+ (b second) (/ (b fourth) 2.0))))
         ((NSColor redColor) set)
         (set nodes (@graph nodes))
         (set count (nodes count))
-        (count times: (do (i) 
-            (set n (nodes i))
-            (set np (n point))
-            (set r (NSMakeRect (- (np first) 3) (- (np second) 3) 6 6))
-            (NSBezierPath fillRect:r)))
-            
+        (count times: (do (i)
+                          (set n (nodes i))
+                          (set np (n point))
+                          (set r (NSMakeRect (- (np first) 3) (- (np second) 3) 6 6))
+                          (NSBezierPath fillRect:r)))
+        
         ((NSColor whiteColor) set)
         (NSBezierPath setDefaultLineWidth:0.9)
         (set edges (@graph edges))
         (set count (edges count))
         (count times: (do (i)
-            (set e (edges i))
-            (set n1 (e sourceNode))
-            (set np1 (n1 point))
-            (set n2 (e destinationNode))
-            (set np2 (n2 point))
-            (NSBezierPath strokeLineFromPoint:np1 toPoint:np2)))))
+                          (set e (edges i))
+                          (set n1 (e sourceNode))
+                          (set np1 (n1 point))
+                          (set n2 (e destinationNode))
+                          (set np2 (n2 point))
+                          (NSBezierPath strokeLineFromPoint:np1 toPoint:np2)))))
 
-    
 (class AppController is NSObject
-    (ivar (id) graphView (id) graph (id) scriptTextView)
-    (ivar-accessors)
-    
-    (- (id) init is
+     (ivar (id) graphView (id) graph (id) scriptTextView)
+     (ivar-accessors)
+     
+     (- (id) init is
         (super init)
         (set $ac self)
         (set @graph (GDGraph new))
         self)
-
-    (- (void) evaluate: (id) sender is
+     
+     (- (void) evaluate: (id) sender is
         (set str (@scriptTextView string))
         (try
             (set prs (parse str))
@@ -105,9 +106,8 @@
             (eval prs)
             (@graphView setGraph:@graph)
             (catch (exception)
-                (NSRunAlertPanel "Bad script" "" nil nil nil)))))
+                   (NSRunAlertPanel "Bad script" "" nil nil nil)))))
 
-        
 (set SHOW_CONSOLE_AT_STARTUP nil)
 
 ;; @class ApplicationDelegate

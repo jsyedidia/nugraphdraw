@@ -5,16 +5,16 @@
 (load "console")	;; interactive console
 
 (class AppController is NSObject
-    (ivar (id) graphView (id) graph (id) scriptTextView)
-    (ivar-accessors)
-    
-    (- (id) init is
+     (ivar (id) graphView (id) graph (id) scriptTextView)
+     (ivar-accessors)
+     
+     (- (id) init is
         (super init)
         (set $ac self)
         (set @graph (GDGraph new))
         self)
-
-    (- (void) evaluate: (id) sender is
+     
+     (- (void) evaluate: (id) sender is
         (set str (@scriptTextView string))
         (try
             (set prs (parse str))
@@ -22,9 +22,8 @@
             (eval prs)
             (@graphView setGraph:@graph)
             (catch (exception)
-                (NSRunAlertPanel "Bad script" "" nil nil nil)))))
+                   (NSRunAlertPanel "Bad script" "" nil nil nil)))))
 
-        
 (set SHOW_CONSOLE_AT_STARTUP nil)
 
 ;; @class ApplicationDelegate

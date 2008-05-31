@@ -8,8 +8,8 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="456"/>
 			<integer value="57"/>
-			<integer value="372"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1180,9 +1180,8 @@ Z2VzIChhcnJheSkpCih3aGlsZSAoPCBhbmdsZSAoKiAyIHBpKSkKCShzZXQgeCAoKEdETm9kZSBhbGxv
 YykgaW5pdFdpdGhQb2ludDoobGlzdCAoKiAxNTAuMCAoTnVNYXRoIHNpbjphbmdsZSkpCgkJCQkJCQkJ
 CQkJICAgKCogMTUwLjAgKE51TWF0aCBjb3M6YW5nbGUpKSkpKQoJKG5vZGVzIGVhY2g6KGRvICh5KQoJ
 CShzZXQgeiAoKEdERWRnZSBhbGxvYykgaW5pdFdpdGhTb3VyY2VOb2RlOnggZGVzdGluYXRpb25Ob2Rl
-OnkpKQoJCShlZGdlcyBhZGRPYmplY3Q6eikpKQoJKG5vZGVzIGFkZE9iamVjdDp4KQoJKHNldCBhbmds
-ZSAoKyBhbmdsZSAoLyBwaSA3KSkpKQoKKEBncmFwaCBzZXROb2Rlczpub2RlcykKKEBncmFwaCBzZXRF
-ZGdlczplZGdlcyk</bytes>
+OnkpKQoJCShlZGdlcyA8PCB6KSkpCgkobm9kZXMgPDwgeCkKCShzZXQgYW5nbGUgKCsgYW5nbGUgKC8g
+cGkgNykpKSkKCihAZ3JhcGggc2V0Tm9kZXM6bm9kZXMpCihAZ3JhcGggc2V0RWRnZXM6ZWRnZXMpA</bytes>
 																		</object>
 																		<object class="NSDictionary" key="NSAttributes">
 																			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1281,7 +1280,7 @@ ZGdlczplZGdlcyk</bytes>
 																<nil key="NSDefaultParagraphStyle"/>
 															</object>
 															<int key="NSTVFlags">6</int>
-															<string key="NSMaxSize">{1257, 1e+07}</string>
+															<string key="NSMaxSize">{1341, 1e+07}</string>
 															<string key="NSMinize">{223, 0}</string>
 															<nil key="NSDelegate"/>
 														</object>
@@ -3431,7 +3430,7 @@ ZGdlczplZGdlcyk</bytes>
 			</object>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../GraphDraw_Nu.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../GraphDraw_Mixed.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>
