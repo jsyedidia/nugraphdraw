@@ -26,6 +26,22 @@
         (set @destinationNode bNode)
         self))
         
+(class GDGraph is NSObject
+    (ivar (id) nodes (id) edges)
+    (ivar-accessors)
+    
+    (- (id) init is
+        (super init)
+        (set @nodes (array))
+        (set @edges (array))
+        self)
+    
+    (- (void) addNode: (id) n is
+        (@nodes addObject:n))
+    
+    (- (void) addEdge: (id) e is
+        (@edges addObject:e)))
+    
     
     
 (class GDGraphView is NSView
