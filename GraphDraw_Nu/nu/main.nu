@@ -32,7 +32,7 @@
      
      (- (id) init is
         (super init)
-		;; Set the global variable $graph to give easy access to the graph.
+        ;; Set the global variable $graph to give easy access to the graph.
         (set $graph self)
         (set @nodes (array))
         (set @edges (array))
@@ -52,7 +52,7 @@
      (- (id) initWithFrame: (NSRect) frameRect is
         (set self (super initWithFrame:frameRect))
         (if (self)
-			;; Set the global variable $view to give easy access to the view.
+            ;; Set the global variable $view to give easy access to the view.
             (set $view self)
             (set @backgroundColor (NSColor darkGrayColor))
             (set @nodeColor (NSColor redColor))
@@ -65,8 +65,8 @@
                        (+ (b second) (/ (b fourth) 2.0)))))
         self)
      
-	;; The following methods are here so the user can change aspects of
-	;; the graph from the console or script.
+     ;; The following methods are here so the user can change aspects of
+     ;; the graph from the console or script.
      (- (void) setGraph: (id) g is
         (set @graph g)
         (self setNeedsDisplay:YES))

@@ -1,10 +1,12 @@
 NuGraphDraw
 
+Jonathan Yedidia, May 31, 2008.
+
 This project is a port from PyObjC to Nu, with enhancements, of Aaron Hillegass' 
 "GraphLaughs" application. 
 
-Pre-requisites are Mac OS X Leopard and the Nu programming language, available
-at http://programming.nu. Build this application in XCode.
+Pre-requisites are Mac OS X Leopard and the Nu programming language, developed by
+Tim Burks and available at http://programming.nu. Build this application in XCode.
 
 "GraphLaughs" was described in the June 8, 2006 post of the Big Nerd Ranch weblog
 at http://weblog.bignerdranch.com.
@@ -12,7 +14,7 @@ at http://weblog.bignerdranch.com.
 This type of application shows off some of the advantages of a dynamic language like Nu.
 One can let the user extend the application at run-time with his own scripts.
 
-Aaron writes that "The Python bridge (PyObjC) is still a bit mysterious to me, 
+Aaron wrote that "The Python bridge (PyObjC) is still a bit mysterious to me, 
 but I can see that they have done a great job leveraging the dynamic nature of 
 both languages to make it easy to work with."
 
@@ -44,5 +46,18 @@ backgroundColor: (NSColor darkGrayColor)
 edgeWidth: 0.9
 nodeSize: 6
 
+If you are interested in seeing more Cocoa applications written in Nu, go the
+the git repository at
+git://github.com/timburks/cocoa-programming-with-nu.git, or look at other examples
+posted by Tim Burks at github.com or the examples that come bundled with Nu.
+
+
 TODO:
 Parens-matching in the scriptTextView.
+Better descriptions of script errors.
+
+If you are interested in fixing these problems, fork the repository, then fix
+them, and send me a pull request.
+
+Jonathan Yedidia
+
