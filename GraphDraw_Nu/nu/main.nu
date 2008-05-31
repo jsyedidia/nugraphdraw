@@ -32,7 +32,8 @@
      
      (- (id) init is
         (super init)
-		(set $graph self)
+		;; Set the global variable $graph to give easy access to the graph.
+        (set $graph self)
         (set @nodes (array))
         (set @edges (array))
         self)
@@ -45,13 +46,14 @@
 
 (class GDGraphView is NSView
      (ivar (id) graph (id) backgroundColor (id) nodeColor (id) edgeColor
-        (int) nodeSize (double) edgeWidth)
+           (int) nodeSize (double) edgeWidth)
      (ivar-accessors)
      
      (- (id) initWithFrame: (NSRect) frameRect is
         (set self (super initWithFrame:frameRect))
         (if (self)
-			(set $view self)
+			;; Set the global variable $view to give easy access to the view.
+            (set $view self)
             (set @backgroundColor (NSColor darkGrayColor))
             (set @nodeColor (NSColor redColor))
             (set @edgeColor (NSColor whiteColor))
@@ -63,26 +65,28 @@
                        (+ (b second) (/ (b fourth) 2.0)))))
         self)
      
+	;; The following methods are here so the user can change aspects of
+	;; the graph from the console or script.
      (- (void) setGraph: (id) g is
         (set @graph g)
         (self setNeedsDisplay:YES))
-        
+     
      (- (void) setBackgroundColor: (id) color is
         (set @backgroundColor color)
         (self setNeedsDisplay:YES))
-
+     
      (- (void) setNodeColor: (id) color is
         (set @nodeColor color)
         (self setNeedsDisplay:YES))
-
+     
      (- (void) setEdgeColor: (id) color is
         (set @edgeColor color)
         (self setNeedsDisplay:YES))
-
+     
      (- (void) setNodeSize: (int) size is
         (set @nodeSize size)
         (self setNeedsDisplay:YES))
-        
+     
      (- (void) setEdgeWidth: (double) width is
         (set @edgeWidth width)
         (self setNeedsDisplay:YES))
@@ -100,10 +104,10 @@
         (count times: (do (i)
                           (set n (nodes i))
                           (set np (n point))
-                          (set r (NSMakeRect (- (np first) (/ @nodeSize 2)) 
-                                             (- (np second) (/ @nodeSize 2)) 
-                                             @nodeSize
-                                             @nodeSize))
+                          (set r (NSMakeRect (- (np first) (/ @nodeSize 2))
+                                      (- (np second) (/ @nodeSize 2))
+                                      @nodeSize
+                                      @nodeSize))
                           (NSBezierPath fillRect:r)))
         
         (@edgeColor set)
