@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AB425B2B0DF1C35C0045A9C8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB425B290DF1C35C0045A9C8 /* MainMenu.xib */; };
 		AB4A8E780DF1A27800FFDC22 /* GDEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4A8E770DF1A27800FFDC22 /* GDEdge.m */; };
 		AB4A8E800DF1A2E200FFDC22 /* GDGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4A8E7B0DF1A2E200FFDC22 /* GDGraph.m */; };
 		AB4A8E810DF1A2E200FFDC22 /* GDGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4A8E7D0DF1A2E200FFDC22 /* GDGraphView.m */; };
@@ -23,13 +23,13 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* GraphDraw_Mixed_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphDraw_Mixed_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GraphDraw_Mixed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphDraw_Mixed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB425B2A0DF1C35C0045A9C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		AB4A8E760DF1A27300FFDC22 /* GDEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDEdge.h; sourceTree = "<group>"; };
 		AB4A8E770DF1A27800FFDC22 /* GDEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDEdge.m; sourceTree = "<group>"; };
 		AB4A8E790DF1A27D00FFDC22 /* GDGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDGraph.h; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AB425B290DF1C35C0045A9C8 /* MainMenu.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -190,8 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				AB4A8E860DF1A34D00FFDC22 /* main.nu in Resources */,
+				AB425B2B0DF1C35C0045A9C8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,10 +221,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+		AB425B290DF1C35C0045A9C8 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DDD58150DA1D0A300B32029 /* English */,
+				AB425B2A0DF1C35C0045A9C8 /* English */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
