@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'GraphDraw_Mixed' target in the 'GraphDraw_Mixed' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
