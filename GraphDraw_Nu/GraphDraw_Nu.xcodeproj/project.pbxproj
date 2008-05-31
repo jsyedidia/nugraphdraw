@@ -12,7 +12,6 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		AB4A8F420DF1B64300FFDC22 /* Nu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4A8F410DF1B64300FFDC22 /* Nu.framework */; };
 		AB4A8F4B0DF1B66500FFDC22 /* main.nu in Resources */ = {isa = PBXBuildFile; fileRef = AB4A8F4A0DF1B66500FFDC22 /* main.nu */; };
-		AB4A8F550DF1B68A00FFDC22 /* GDEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4A8F4E0DF1B68A00FFDC22 /* GDEdge.m */; };
 		AB4A8F560DF1B68A00FFDC22 /* GDGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4A8F500DF1B68A00FFDC22 /* GDGraph.m */; };
 		AB4A8F5B0DF1B6CE00FFDC22 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4A8F590DF1B6CE00FFDC22 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
@@ -29,8 +28,6 @@
 		8D1107320486CEB800E47090 /* GraphDraw_Nu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphDraw_Nu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4A8F410DF1B64300FFDC22 /* Nu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nu.framework; path = /Library/Frameworks/Nu.framework; sourceTree = "<absolute>"; };
 		AB4A8F4A0DF1B66500FFDC22 /* main.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.nu; path = nu/main.nu; sourceTree = "<group>"; };
-		AB4A8F4D0DF1B68900FFDC22 /* GDEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDEdge.h; sourceTree = "<group>"; };
-		AB4A8F4E0DF1B68A00FFDC22 /* GDEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDEdge.m; sourceTree = "<group>"; };
 		AB4A8F4F0DF1B68A00FFDC22 /* GDGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDGraph.h; sourceTree = "<group>"; };
 		AB4A8F500DF1B68A00FFDC22 /* GDGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDGraph.m; sourceTree = "<group>"; };
 		AB4A8F5A0DF1B6CE00FFDC22 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -52,8 +49,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AB4A8F4D0DF1B68900FFDC22 /* GDEdge.h */,
-				AB4A8F4E0DF1B68A00FFDC22 /* GDEdge.m */,
 				AB4A8F4F0DF1B68A00FFDC22 /* GDGraph.h */,
 				AB4A8F500DF1B68A00FFDC22 /* GDGraph.m */,
 			);
@@ -193,7 +188,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				AB4A8F550DF1B68A00FFDC22 /* GDEdge.m in Sources */,
 				AB4A8F560DF1B68A00FFDC22 /* GDGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

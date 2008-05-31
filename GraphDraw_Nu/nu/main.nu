@@ -14,6 +14,19 @@
         
     (- (NSPoint) point is
         @point))
+        
+(class GDEdge is NSObject
+    (ivar (id) sourceNode (id) destinationNode)
+    (ivar-accessors)
+    
+    (- (id) initWithSourceNode: (id) aNode 
+              destinationNode: (id) bNode is
+        (super init)
+        (set @sourceNode aNode)
+        (set @destinationNode bNode)
+        self))
+        
+    
     
 (class GDGraphView is NSView
     (ivar (id) graph)
