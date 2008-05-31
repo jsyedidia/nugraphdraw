@@ -46,7 +46,10 @@ backgroundColor: (NSColor darkGrayColor)
 edgeWidth: 0.9
 nodeSize: 6
 
-If you are interested in seeing more Cocoa applications written in Nu, go the
+Of course, it's even more fun to change the graph by re-writing the default script.
+Try changing some of the "magic numbers" like one or both of the 180's, the 300, or the 10.
+
+If you are interested in seeing more Cocoa applications written in Nu, go to the
 the git repository at
 git://github.com/timburks/cocoa-programming-with-nu.git, or look at other examples
 posted by Tim Burks at github.com or the examples that come bundled with Nu.
