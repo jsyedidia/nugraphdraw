@@ -9,7 +9,8 @@ Pre-requisites are Mac OS X Leopard and the Nu programming language, developed b
 Tim Burks and available at http://programming.nu. Build this application in XCode.
 
 "GraphLaughs" was described in the June 8, 2006 post of the Big Nerd Ranch weblog
-at http://weblog.bignerdranch.com.
+at http://weblog.bignerdranch.com. You can download the source at
+http://weblog.bignerdranch.com/pythonex/GraphLaughs.tgz.
 
 This type of application shows off some of the advantages of a dynamic language like Nu.
 One can let the user extend the application at run-time with his own scripts.
@@ -29,11 +30,10 @@ to Hillegass' original.
 
 GraphDraw_Nu, on the other hand, is written completely in Nu. I've also added
 some hooks for you to use in the Nu console (or the textView where you put
-your scripts.) You can call up the console with command-L.
-You can access the view with the global variable $view or access 
-the graph with the global variable $graph. 
-You can change the colors of the nodes, edges, or background, 
-or change the size of the nodes or the width of the edges. 
+your scripts.) You can call up the console with command-L. You can access the view 
+with the global variable $view or access the graph with the global variable $graph. 
+You can change the colors of the nodes, edges, or background, or change the size of 
+the nodes or the width of the edges. 
 
 For example, try this in the Nu console, after evaluating the initial script:
 ($view setNodeSize:20)
@@ -56,8 +56,9 @@ TODO:
 Parens-matching in the scriptTextView.
 Better descriptions of script errors.
 
-If you are interested in fixing these problems, fork the repository, then fix
-them, and send me a pull request.
+If you are interested in fixing these problems, or otherwise improving the application,
+please fork the repository, then improve it, and then send me a pull request.
 
+Thanks,
 Jonathan Yedidia
 
